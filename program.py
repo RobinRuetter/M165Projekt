@@ -30,10 +30,40 @@ if eingabe == "insert":
     })
     print("Erfolgreich hinzugefügt")
 elif eingabe == "find":
-    print("Bitte geben sie den Namen des Spiels ein")
-    name = input()
-    for x in collection.find({"Titel": name}):
-        print(x)
+    print("nach was möchten sie suchen? (Titel, Ausgabejahr, Verkaufszahlen, Altersgrenze, Art, Wertung)")
+    suche = input()
+    if suche == "Titel":
+        print("Geben sie den Titel ein")
+        Titel = input()
+        for x in collection.find({"Titel": Titel}):
+            print(x)
+    elif suche == "Ausgabejahr":
+        print("Geben sie das Ausgabejahr ein")
+        Ausgabejahr = input()
+        for x in collection.find({"Ausgabejahr": Ausgabejahr}):
+            print(x)
+    elif suche == "Verkaufszahlen":
+        print("Geben sie die Verkaufszahlen ein")
+        Verkaufszahlen = input()
+        for x in collection.find({"Verkaufszahlen": Verkaufszahlen}):
+            print(x)
+    elif suche == "Altersgrenze":
+        print("Geben sie die Altersgrenze ein")
+        Altersgrenze = input()
+        for x in collection.find({"Altersgrenze": Altersgrenze}):
+            print(x)
+    elif suche == "Art":
+        print("Geben sie die Art ein")
+        Art = input()
+        for x in collection.find({"Art": Art}):
+            print(x)
+    elif suche == "Wertung":
+        print("Geben sie die Wertung ein")
+        Wertung = input()
+        for x in collection.find({"Wertung": Wertung}):
+            print(x)
+    else:
+        print("Falsche Eingabe")
 elif eingabe == "delete":
     print("Bitte geben sie den Namen des Spiels ein")
     name = input()
