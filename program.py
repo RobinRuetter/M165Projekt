@@ -83,5 +83,6 @@ elif eingabe == "exit":
     exit()
 else:
     print("Falsche Eingabe")
+input("Drücken sie eine Taste um das Programm zu beenden")
 print("Programm beendet")
 exit()
