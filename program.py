@@ -48,17 +48,17 @@ while a == 1:
                 print(x)
         elif suche == "Ausgabejahr":
             print("Geben sie das Ausgabejahr ein")
-            Ausgabejahr = input()
+            Ausgabejahr = int(input())
             for x in collection.find({"Ausgabejahr": Ausgabejahr}):
                 print(x)
         elif suche == "Verkaufszahlen":
             print("Geben sie die Verkaufszahlen ein")
-            Verkaufszahlen = input()
+            Verkaufszahlen = int(input())
             for x in collection.find({"Verkaufszahlen": Verkaufszahlen}):
                 print(x)
         elif suche == "Altersgrenze":
             print("Geben sie die Altersgrenze ein")
-            Altersgrenze = input()
+            Altersgrenze = int(input())
             for x in collection.find({"Altersgrenze": Altersgrenze}):
                 print(x)
         elif suche == "Art":
@@ -68,7 +68,7 @@ while a == 1:
                 print(x)
         elif suche == "Wertung":
             print("Geben sie die Wertung ein")
-            Wertung = input()
+            Wertung = int(input())
             for x in collection.find({"Wertung": Wertung}):
                 print(x)
         else:
@@ -101,8 +101,8 @@ while a == 1:
         print("update = Daten ändern")
         print("exit = Programm beenden")
         print("hilfe = Hilfe")
-        print("version 0.4.1")
-        print("produziert am 31.10.2020 11:10")
+        print("version 0.4.2")
+        print("produziert am 31.10.2020 12:20")
     #wrong input
     else:
         print("Falsche Eingabe")
