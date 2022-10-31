@@ -101,8 +101,8 @@ while a == 1:
         print("update = Daten ändern")
         print("exit = Programm beenden")
         print("hilfe = Hilfe")
-        print("version 0.3.1")
-        print("produziert am 31.10.2020 11:00")
+        print("version 0.4.1")
+        print("produziert am 31.10.2020 11:10")
     #wrong input
     else:
         print("Falsche Eingabe")
