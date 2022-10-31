@@ -9,7 +9,7 @@ collection = db.pcgames
 a=1
 while a == 1:
     #ask for input
-    print("was möchten sie machen? (insert, find, delete, update, exit, hilfe)")
+    print("was möchten sie machen? (insert, find, delete, update, exit, hilfe, show all)")
     eingabe = input()
     #insert data
     if eingabe == "insert":
@@ -34,6 +34,9 @@ while a == 1:
             "Wertung": Wertung
             })
         print("Erfolgreich hinzugefügt")
+    elif eingabe == "show all":
+        for document in collection.find():
+            print(document)
     #find data
     elif eingabe == "find":
         print("nach was möchten sie suchen? (Titel, Ausgabejahr, Verkaufszahlen, Altersgrenze, Art, Wertung)")
