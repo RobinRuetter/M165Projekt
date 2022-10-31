@@ -9,7 +9,7 @@ collection = db.pcgames
 a=1
 while a == 1:
     #ask for input
-    print("was möchten sie machen? (insert, find, delete, update, exit)")
+    print("was möchten sie machen? (insert, find, delete, update, exit, hilfe)")
     eingabe = input()
     #insert data
     if eingabe == "insert":
@@ -90,6 +90,18 @@ while a == 1:
     elif eingabe == "exit":
         print("Programm wird beendet")
         exit()
+    #help
+    elif eingabe == "hilfe":
+        print("insert = Daten einfügen")
+        print("find = Daten suchen")
+        print("delete = Daten löschen")
+        print("update = Daten ändern")
+        print("exit = Programm beenden")
+        print("hilfe = Hilfe")
+        print("version 0.3.1")
+        print("produziert am 31.10.2020 11:00")
+    #wrong input
     else:
         print("Falsche Eingabe")
+        print("Geben sie hilfe ein um die Hilfe anzuzeigen")
     
