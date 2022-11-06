@@ -16,15 +16,15 @@ while a == 1:
         print("Geben sie den Namen des Spiels ein")
         Titel = input()
         print("Geben sie bitte das Ausgabejahr ein")
-        Ausgabejahr = input()
+        Ausgabejahr = int(input())
         print("Geben sie bitte die Verkaufszahlen ein")
-        Verkaufszahlen = input()
+        Verkaufszahlen = int(input())
         print("Geben sie bitte die Altersfreigabe ein")
-        Altersgenze = input()
+        Altersgenze = int(input())
         print("Geben sie bitte die Art des Spiels ein")
         Art = input()
         print("Geben sie bitte eine Wertung Von 0 bis 10 ein")
-        Wertung = input()
+        Wertung = int(input())
         collection.insert_one({
             "Titel": Titel,
             "Ausgabejahr": Ausgabejahr,
