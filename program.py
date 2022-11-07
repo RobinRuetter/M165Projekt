@@ -34,6 +34,7 @@ while a == 1:
             "Wertung": Wertung
             })
         print("Erfolgreich hinzugefügt")
+    #show all data
     elif eingabe == "show all":
         for document in collection.find():
             print(document)
@@ -84,11 +85,46 @@ while a == 1:
         print("Bitte geben sie den Namen des Spiels ein")
         name = input()
         print("Was möchten sie ändern? (Titel, Ausgabejahr, Verkaufszahlen, Altersgrenze, Art, Wertung)")
-        aendern = input()
-        print("Bitte geben sie den neuen Wert ein")
-        neu = input()
-        collection.update_one({"Titel": name}, {"$set": {aendern: neu}})
-        print("Erfolgreich geändert")
+        update = input()
+        if update == "Titel" :
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = input()
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        elif update == "Art":
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = input()
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        elif update == "Ausgabejahr":
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = int(input())
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        elif update == "Verkaufszahlen":
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = int(input())
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        elif update == "Altersgrenze":
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = int(input())
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        elif update == "Wertung":
+            aendern = update
+            print("Geben sie den neuen Wert ein")
+            new = int(input())
+            collection.update_one({"Titel": name}, {"$set": {aendern: new}})
+            print("Erfolgreich geändert")
+        else:    
+            print("Falsche Eingabe")
+            print("für hilfe geben sie 'hilfe' ein")
     #exit program
     elif eingabe == "exit":
         print("Programm wird beendet")
@@ -101,10 +137,9 @@ while a == 1:
         print("update = Daten ändern")
         print("exit = Programm beenden")
         print("hilfe = Hilfe")
-        print("version 0.4.2")
-        print("produziert am 31.10.2020 12:20")
+        print("version 1.0")
+        print("produziert am 07.11.2020 10:00")
     #wrong input
     else:
         print("Falsche Eingabe")
         print("Geben sie hilfe ein um die Hilfe anzuzeigen")
-    
